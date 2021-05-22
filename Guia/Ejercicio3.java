@@ -9,28 +9,9 @@ public class Ejercicio3 {
 
     do {
       System.out.println("Ingrese la calificación del alumno: ");
-      int calificacion = scan.nextInt();
+      int nota = scan.nextInt();
 
-      if (calificacion > 93) {
-
-        System.out.println("Excelente");
-        
-      } else if (calificacion >= 85) {
-        
-        System.out.println("Sobresaliente");
-        
-      } else if (calificacion >= 75) {
-
-        System.out.println("Distinguido");
-
-      } else if (calificacion >= 60) {
-
-        System.out.println("Bueno");
-
-      } else {
-
-        System.out.println("Desaprobado");
-      }
+      calificacion(nota);
 
       System.out.println("\nDesea continuar?. Presione 1 para continuar, o cualquier otra tecla para salir.");
       continuar = scan.nextInt();
@@ -38,5 +19,30 @@ public class Ejercicio3 {
     } while ( continuar == 1 );
 
     scan.close();
+  }
+
+  public static void calificacion(int nota){
+
+    if (nota > 93) {
+
+      System.out.println("Excelente");
+      
+    } else if (nota >= 85) {
+      
+      System.out.println("Sobresaliente");
+      
+    } else if (nota >= 75) {
+
+      System.out.println("Distinguido");
+
+    } else if (nota >= 60) {
+
+      System.out.println("Bueno");
+
+    } else {
+
+      System.out.println("Desaprobado");
+    }
+
   }
 }
