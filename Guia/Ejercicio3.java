@@ -4,30 +4,38 @@ import java.util.Scanner;
 
 public class Ejercicio3 {
   public static void main(String[] args) {
-    System.out.println("Ingrese la calificación del alumno: ");
     Scanner scan = new Scanner(System.in);
-    int calificacion = scan.nextInt();
+    int continuar = 1;
 
-    if (calificacion > 93) {
+    do {
+      System.out.println("Ingrese la calificación del alumno: ");
+      int calificacion = scan.nextInt();
 
-      System.out.println("Excelente");
+      if (calificacion > 93) {
+
+        System.out.println("Excelente");
+        
+      } else if (calificacion >= 85) {
+        
+        System.out.println("Sobresaliente");
+        
+      } else if (calificacion >= 75) {
+
+        System.out.println("Distinguido");
+
+      } else if (calificacion >= 60) {
+
+        System.out.println("Bueno");
+
+      } else {
+
+        System.out.println("Desaprobado");
+      }
+
+      System.out.println("\nDesea continuar?. Presione 1 para continuar, o cualquier otra tecla para salir.");
+      continuar = scan.nextInt();
       
-    } else if (calificacion >= 85) {
-      
-      System.out.println("Sobresaliente");
-      
-    } else if (calificacion >= 75) {
-
-      System.out.println("Distinguido");
-
-    } else if (calificacion >= 60) {
-
-      System.out.println("Bueno");
-
-    } else {
-
-      System.out.println("Desaprobado");
-    }
+    } while ( continuar == 1 );
 
     scan.close();
   }
