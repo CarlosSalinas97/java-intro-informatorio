@@ -2,7 +2,7 @@ package Complementarios2;
 
 import java.util.ArrayList;
 
-public class Ejercicios5 {
+public class Ejercicio5 {
     public static void main(String[] args) {
         ArrayList<Integer> horasTrabajadas = new ArrayList<Integer>();
         ArrayList<Integer> valorPorHora = new ArrayList<Integer>();
